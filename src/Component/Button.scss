@@ -12,6 +12,15 @@ $yellow: #fff3bf;
   &:active {
     background: darken($color, 10%);
   }
+  &.outline {
+    color: $color;
+    background: none;
+    border: 1px solid $color;
+    &:hover {
+      background: $color;
+      color: #fff;
+    }
+  }
 }
 
 .Button {
@@ -60,6 +69,15 @@ $yellow: #fff3bf;
   //Button 과 Button이 함께있을때 왼쪽에 쓴 Button 에 속성을 줌
   & + & {
     margin-left: 1rem;
+  }
+  &.fullwidth {
+    width: 100%;
+    justify-content: center;
+    // flex-direction: column;
+    & + & {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
   }
 }
 //Button 과 Button이 함께있을때 왼쪽에 쓴 Button 에 속성을 줌
