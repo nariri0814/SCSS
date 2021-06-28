@@ -24,6 +24,12 @@ const AppBlock = styled.div`
   padding: 1rem;
 `;
 
+const ButtonGroup = styled.div`
+  & + & {
+    margin-top: 1rem;
+  }
+`;
+
 function App() {
   // const [check, setCheck] = useState(false);
   // const onChange = (e) => {
@@ -32,9 +38,23 @@ function App() {
   return (
     <ThemeProvider theme={{blue: '#228be6', gray: '#496057', pink:'#f06595'}}>
       <AppBlock>
-        <Button>BUTTON</Button>
-        <Button color="gray">BUTTON</Button>
-        <Button color="pink">BUTTON</Button>
+        <ButtonGroup>
+          <Button size="large">BUTTON</Button>
+          <Button color="gray">BUTTON</Button>
+          <Button color="pink" size="small">BUTTON</Button>
+        </ButtonGroup>
+
+        <ButtonGroup>
+          <Button size="large" outline>BUTTON</Button>
+          <Button color="gray" outline>BUTTON</Button>
+          <Button color="pink" size="small" outline>BUTTON</Button>
+        </ButtonGroup>
+
+        <ButtonGroup>
+          <Button size="large" fullWidth>BUTTON</Button>
+          <Button color="gray" size="large" fullWidth>BUTTON</Button>
+          <Button color="pink" size="large" fullWidth>BUTTON</Button>
+        </ButtonGroup>
       </AppBlock>
     {/* <Circle color="black"/>
     <Circle color="blue" huge/> */}
