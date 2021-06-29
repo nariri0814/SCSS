@@ -75,15 +75,16 @@ const sizeStyles = css`
 `;
 
 const fullWidthStyle = css`
-    ${props => props.fullWidth &&
+    ${props => 
+        props.fullWidth && 
         css`
             width:100%;
             justify-content: center;
-            & + & {
-                margin-left: 0;
+            &:not(&:first-child) {
+                margin-left: 0 ;
                 margin-top: 1rem;
             }
-        `}
+    `}
 `;  
 
 const StyledButton = styled.button`
